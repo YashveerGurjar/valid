@@ -1,0 +1,17 @@
+<h1><%= @article.name%></h1>
+
+<p><%= @article.email %></p>
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <br>
+  <%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+
+
+<h2>Comments</h2>
+<%= render @article.feedbacks %>
+
+
+<h2>Add a comment:</h2>
+<%= render 'feedbacks/form' %>

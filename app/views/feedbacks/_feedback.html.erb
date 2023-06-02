@@ -1,0 +1,16 @@
+
+  <p>
+    <strong>Commenter:</strong>
+    <%= feedback.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= feedback.body %>
+  </p>
+    <p>
+    <%= link_to "Destroy Comment", [feedback.article, feedback], data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+  </p>
