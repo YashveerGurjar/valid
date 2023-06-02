@@ -1,0 +1,57 @@
+<%= form_with model: article do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <% article.errors.full_messages_for(:name).each do |message| %>
+  
+        <div><%= message %></div>
+        <br>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :age %><br>
+      <%= form.text_field :age %>
+      <% article.errors.full_messages_for(:age).each do |message| %>
+        <div><%= message %></div>
+        <br>
+      <% end %>
+    </div>
+    <div>
+    <%= form.label :phn %><br>
+    <%= form.text_field :phn %>
+    <% article.errors.full_messages_for(:phn).each do |message| %>
+      <div><%= message %></div>
+      <br>
+    <% end %>
+  </div>
+  <div>
+  <%= form.label :email %><br>
+  <%= form.text_field :email %>
+  <% article.errors.full_messages_for(:email).each do |message| %>
+    <div><%= message %></div>
+    <br>
+  <% end %>
+</div>
+<div>
+<%= form.label :Confirm_email %><br>
+<%= form.text_field :email_confirmation %>
+<% article.errors.full_messages_for(:email_confirmation).each do |message| %>
+  <div><%= message %></div> <br>
+<% end %>
+</div>
+<br>
+<div>
+<%= form.label :TermsCondition %>
+<%= form.check_box :termsandcondition %>
+
+<% article.errors.full_messages_for(:termsandcondition).each do |message| %>
+  <%= message %>
+  <br>
+<% end %>
+</div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
