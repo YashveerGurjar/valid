@@ -4,5 +4,6 @@ class Article < ApplicationRecord
     validates :phn, presence: { message: ":Please Enter the Phn"}, numericality: true , length: { is: 10 }
     validates :email, confirmation: true
     validates :termsandcondition, acceptance: true
+   
 
 end
