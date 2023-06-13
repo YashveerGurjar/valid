@@ -46,3 +46,4 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:name, :age, :phn, :email, :email_confirmation, :termsandcondition)
   end
 end
+
